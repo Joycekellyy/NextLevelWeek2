@@ -50,6 +50,11 @@ const weekdays = [
     "Sábado",
 ]
 
+function getsSubject(subjectNumber) {
+    const position = +subjectNumber - 1
+    return subjects[position]
+}
+
 function pageLanding(req, res) {
     return res.render("index.html")
 }
@@ -61,10 +66,17 @@ function pageStudy(req, res) {
 
 function pageGiveClasses(req, res) {
     const data = req.query
-    const isNotEmpty = Object.keys(data).length > 0 
+
+    const isNotEmpty = Object.keys(data).length > 0
+
+    data.subject = getsSubject(data.subject)
+
+
     if (isNotEmpty) {
         console.log("entrei")
         proffys.push(data)
+
+        return res.redirect("/study")
     }
     
     return res.render("give-classes.html", {subjects, weekdays})
