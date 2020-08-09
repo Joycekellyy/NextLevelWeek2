@@ -1,7 +1,7 @@
 # Next Level Week #2
 Site criado na semana Next Level Week #2
 
-* [Acesse o link clicando aqui.](https://joycekellyy.github.io/NextLevelWeek2/)
+* [Acesse a página clicando aqui.](https://joycekellyy.github.io/NextLevelWeek2/) Talvez contenha alguns erros. :(
 
 * Primeiro contato com um projeto da Rocketseat!
 
